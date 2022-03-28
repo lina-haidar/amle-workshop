@@ -4,7 +4,7 @@
 
 An existing Azure Machine Learning workspace. Please refer to the [Lab 1](../LabM01_01/README.md) for guidance on how to create it if needed.
 
-A datastore where to upload data. Please refer to the [Lab 3] for guidance on how to create it if needed
+A datastore where to upload data. Please refer to the [Lab 3](../LabM01_03/README.md) for guidance on how to create it if needed
 
 ## Create and deploy a regression model using the Azure Machine Learning Studio Designer
 
@@ -164,12 +164,6 @@ We will start creating using *Linear Regression* and then we will try a *Boosted
 
     ![](img/normalize_data_other_settings.png)
 
-
-
-<!--
-Edit Metadata
--->
-
 48.	In the search box write  *Edit Metadata*.
 
     ![](img/search_edit_metadata.png)
@@ -181,15 +175,14 @@ Edit Metadata
 
 51.	Click the **Edit Metadata** module to see its properties on the right side of the screen.
 
-    +++++++++++++++++++++++++++++++![](img/edit_metadata_properties.png)
+    ![](img/edit_metadata_properties.png)
 
-52.  Click *Edit column* for **Column** field
-53.	In the Select columns window add the following columns:
-**Carrier**, **OriginAirportID**, **DestAirportID**
+1.   Click *Edit column* for **Column** field
+53.	In the Select columns window add the following columns: **Carrier**, **OriginAirportID**, **DestAirportID**
 
     ![](img/columns_edit_metadata.png)
 
-54.  Click **Save**
+1.   Click **Save**
 55.	Set the remaining properties of the **Edit Metadata** as shown below:
     1. Data type: String
     2. Categorial: Categorical
@@ -197,11 +190,7 @@ Edit Metadata
     4. New column name leave blank
 
     ![](img/edit_metadata_other_settings.png)
-
-<!--
-Split Data
--->
-
+    
 56.	In the search box write *Split Data*.
 
     ![](img/search_split_data.png)
@@ -218,10 +207,6 @@ Split Data
 
     ![](img/split_data_settings.png)
 
-<!--
-Train Model
--->
-
 61.	In the search box write *Train Model*.
 
     ![](img/search_train_model.png)
@@ -232,17 +217,12 @@ Train Model
     ![](img/add_train_model.png)
 
 64.	Click the **Train Model** module to see its properties on the right side of the screen.
-65. Click *Edit column* for **Label column** field
+1.  Click *Edit column* for **Label column** field
 66.	Select the column **ArrDelay**
 
     ![](img/select_train_model_column.png)
 
 67. Click **Save**
-
-<!-- 
-Linear Regression
--->
-
 68.  In the search box write *Linear Regression*.
 
     ![](img/search_linear_regression.png)
@@ -251,7 +231,7 @@ Linear Regression
 
     ![](img/add_linear_regression.png)
 
-70. Connect the  output of the **Linear Regression** module to the left input of the **Train Model** module.
+70.  Connect the  output of the **Linear Regression** module to the left input of the **Train Model** module.
 71.	Click the **Linear Regression** module to see its properties on the right side of the screen.
 
 72.	Set the properties of the **Linear Regression** as shown below:
@@ -262,11 +242,7 @@ Linear Regression
 
     ![](img/linear_regression_settings.png)
 
-<!--
-Score Model
--->
-
-73. In the search box write *Score Model*.
+73.  In the search box write *Score Model*.
 
     ![](img/search_score_model.png)  
 
@@ -274,9 +250,6 @@ Score Model
 75. Connect the output of **Train Model** module to the left input of the **Score Model** module and the right output of the **Split Data** module to right input of the **Score Mode**
 
     ![](img/add_score_model.png)
-<!--
-Evaluate Model
--->
 
 76. In the search box write *Evaluate Model*.
 
